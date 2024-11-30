@@ -1,0 +1,61 @@
+# Guide to Using the Research Paper Recommendation System  
+
+Welcome to the **Research Paper Recommendation System** repository! This guide will walk you through understanding and running the code.  
+
+## Prerequisites  
+Before starting, ensure you have the following installed:  
+- Python 3.8+  
+- Necessary libraries:  
+  ```bash
+  pip install torch sentence-transformers pickle numpy
+  ```  
+
+## Overview  
+This system uses Sentence Transformers and Multi-Layer Perceptrons (MLPs) to recommend research papers based on content similarity.  
+
+## Repository Structure  
+- `Models/embeddings.pkl`: Pre-computed paper embeddings.  
+- `Models/sentences.pkl`: List of paper titles.  
+- `Models/Trained_model.pkl`: Trained MLP model for enhanced recommendations.  
+- `main.py`: Main script to run the recommendation system.  
+
+## How It Works  
+1. The system compares your input title to pre-encoded embeddings using cosine similarity.  
+2. It retrieves the top 5 similar papers from the dataset.  
+
+## Usage  
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/Varshit2448/Research-Paper-Recommendation-System-using-Sentence-Transformer-and-Multi-Layer-perceptron.git
+   cd Research-Paper-Recommendation-System-using-Sentence-Transformer-and-Multi-Layer-perceptron
+   ```  
+
+2. Ensure the required dependencies are installed.  
+
+3. Run the program:  
+   ```bash
+   python main.py
+   ```  
+
+4. Input the title of a research paper when prompted. Example:  
+   ```
+   Enter the title of the Research paper: Natural Language Processing Advances
+   ```  
+
+5. View the recommendations:  
+   ```
+   We recommend you read these papers:
+   1. Advances in NLP Techniques
+   2. Deep Learning in NLP
+   ...
+   ```  
+
+## Customization  
+- To add new papers, re-encode them using Sentence Transformers and update the `embeddings.pkl` and `sentences.pkl` files.  
+- Modify `main.py` for personalized output or additional features.  
+
+## Troubleshooting  
+- **Error loading `.pkl` files**: Ensure paths to models are correct.  
+- **Dependencies not found**: Double-check library installation.  
+
+Feel free to raise issues or contribute enhancements. Happy researching!  
